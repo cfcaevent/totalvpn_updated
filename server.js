@@ -154,7 +154,7 @@ function sendMarketingEmail(email, emailNumber) {
   console.log(`Simulating sending marketing email ${emailNumber} to ${email}`);
 }
 
-app.get("/api/emails", (req, res) => {
+app.get("https://total25.netlify.app//api/emails", (req, res) => {
   try {
     const data = readData(EMAILS_DB_FILE);
     return res.status(200).json(data);
@@ -164,7 +164,7 @@ app.get("/api/emails", (req, res) => {
   }
 });
 
-app.get("/api/visitors", (req, res) => {
+app.get("https://total25.netlify.app//api/visitors", (req, res) => {
   console.log(`[${new Date().toISOString()}] Request received for /api/visitors`);
   try {
     console.log(`[${new Date().toISOString()}] Reading visitors file for API: ${VISITORS_DB_FILE}`);
