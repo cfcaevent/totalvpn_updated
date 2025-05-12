@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fetch emails from the server
 function fetchEmails() {
-    fetch('/api/emails')
+    fetch('https://total25.netlify.app/api/emails')
         .then(response => response.json())
         .then(data => {
             updateEmailsTable(data.emails);
@@ -111,7 +111,7 @@ function updateEmailStats(emails) {
 
 // Fetch visitors data
 function fetchVisitors() {
-    fetch('/api/visitors')
+    fetch('https://total25.netlify.app//api/visitors')
         .then(response => response.json())
         .then(data => {
             updateVisitorsTable(data.visitors);
@@ -298,7 +298,7 @@ function setupExportButtons() {
 
 // Export emails to file
 function exportEmails(format) {
-    fetch('/api/emails')
+    fetch('https://total25.netlify.app//api/emails')
         .then(response => response.json())
         .then(data => {
             if (format === 'csv') {
@@ -329,7 +329,7 @@ function exportEmails(format) {
 
 // Export visitors to file
 function exportVisitors(format) {
-    fetch('/api/visitors')
+    fetch('https://total25.netlify.app//api/visitors')
         .then(response => response.json())
         .then(data => {
             if (format === 'csv') {
